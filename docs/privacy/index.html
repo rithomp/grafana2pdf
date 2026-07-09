@@ -1,1 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Privacy Policy — Grafana2PDF</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+        line-height: 1.65;
+      }
+      body {
+        margin: 0;
+        background: #0b1220;
+        color: #e5edf8;
+      }
+      main {
+        width: min(820px, calc(100% - 2rem));
+        margin: 2rem auto;
+        box-sizing: border-box;
+        padding: clamp(1.5rem, 5vw, 3.5rem);
+        border: 1px solid #26364f;
+        border-radius: 18px;
+        background: #111c2e;
+      }
+      h1,
+      h2 {
+        color: #fff;
+        line-height: 1.2;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+      }
+      p,
+      li {
+        color: #c4d0e1;
+      }
+      .summary {
+        padding: 1rem 1.25rem;
+        border-left: 4px solid #ff7a1a;
+        border-radius: 6px;
+        background: #18263c;
+        color: #eef5ff;
+      }
+      a {
+        color: #ffad70;
+      }
+      a:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+      }
+      footer {
+        margin-top: 2.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #2b3b54;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Grafana2PDF Privacy Policy</h1>
+      <p><strong>Effective date and last updated:</strong> 9 July 2026</p>
+
+      <p class="summary">
+        Grafana2PDF processes user-selected Grafana dashboard content locally in the browser solely to generate PDF and
+        PNG files. The extension does not send dashboard content, authentication information, analytics, or usage data
+        to the developer or to third parties.
+      </p>
+
+      <h2>Purpose and scope</h2>
+      <p>
+        Grafana2PDF has a single purpose: exporting dashboards selected by the user from a Grafana server as local
+        full-page PDF and PNG files. This policy applies to the Grafana2PDF browser extension.
+      </p>
+
+      <h2>Information processed</h2>
+      <p>The extension processes only the information needed to perform an export:</p>
+      <ul>
+        <li>The user-selected Grafana server origin and base path.</li>
+        <li>Grafana folder and dashboard identifiers, titles, URLs, and visible dashboard content.</li>
+        <li>User-supplied run identifiers, time ranges, output settings, and dashboard variables.</li>
+        <li>Captured dashboard pixels used to construct the requested PDF and PNG files.</li>
+        <li>
+          Local execution status, errors, timing, dimensions, and output filenames used for progress logs and
+          interrupted-run recovery.
+        </li>
+      </ul>
+
+      <h2>Authentication</h2>
+      <p>
+        The extension uses the browser's existing signed-in Grafana session. It does not request or store a Grafana
+        password, API token, or other login credential. The browser may send the user's existing session cookies
+        directly to the selected Grafana server, as it normally does when the user visits Grafana. Grafana2PDF does not
+        read, copy, or record those cookies, authentication headers, or response bodies.
+      </p>
+
+      <h2>How information is used</h2>
+      <p>The processed information is used only to:</p>
+      <ul>
+        <li>Find dashboards that the signed-in user can access.</li>
+        <li>Open and render the dashboards selected by the user.</li>
+        <li>Generate PDF, PNG, JSON log, and CSV summary files in the browser's Downloads directory.</li>
+        <li>Show export progress and recover execution logs after an interrupted export.</li>
+      </ul>
+
+      <h2>Network communication and sharing</h2>
+      <p>
+        Grafana2PDF communicates only with the Grafana origin selected by the user. It has no developer server,
+        analytics, telemetry, advertising, tracking, or remote-code service. Information processed by the extension is
+        not sold, transferred, or shared with the developer or any third party. Output files are saved locally through
+        the browser's download system.
+      </p>
+
+      <h2>Local storage and retention</h2>
+      <p>
+        Pending job settings and execution journals are stored locally in the extension's browser storage. Dashboard
+        variable values can be present in a pending job while it is being executed, but persisted run logs record
+        variable names only. After final log files are downloaded successfully, the extension removes that execution's
+        pending job and journal. Interrupted runs or failed log downloads can remain until the user downloads the
+        recovered logs or dismisses the recovery notice.
+      </p>
+      <p>
+        Removing the extension clears its extension storage according to the browser's normal behavior. Files already
+        saved in the Downloads directory remain until the user deletes them.
+      </p>
+
+      <h2>User control</h2>
+      <p>
+        Exporting starts only after a user action. Users choose the Grafana server, dashboards, time ranges, variables,
+        and output formats. Users can cancel an export, dismiss locally retained recovery data, revoke the optional
+        permission for a Grafana origin in browser settings, delete downloaded files, or uninstall the extension.
+      </p>
+
+      <h2>Limited use</h2>
+      <p>
+        Grafana2PDF's use of information is limited to providing and improving its disclosed dashboard-export
+        functionality. The extension does not use information for advertising, credit, lending, or any unrelated
+        purpose.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        This policy may be updated when the extension's functionality or data practices change. Material changes will be
+        reflected on this page by updating the date above.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Privacy questions can be submitted to the maintainer through
+        <a href="https://github.com/rithomp">the rithomp GitHub profile</a>.
+      </p>
+
+      <h2>Privacy-policy website hosting</h2>
+      <p>
+        This policy page is hosted by GitHub Pages. GitHub may process standard website request information under the
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+          >GitHub General Privacy Statement</a
+        >. Visiting this page is separate from using Grafana2PDF; the extension does not contact GitHub.
+      </p>
+
+      <footer><a href="../">Return to Grafana2PDF</a></footer>
+    </main>
+  </body>
+</html>
 
